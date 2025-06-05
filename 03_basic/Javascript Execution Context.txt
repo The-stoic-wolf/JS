@@ -1,0 +1,117 @@
+🔹 What is Execution Context in JavaScript?
+        It’s like a box or environment >> where your code runs OR how it runs 
+
+            JavaScript needs to know:
+                                    - what is running
+                                    - what variables are there
+                                    - what functions can be called
+
+So it creates something called Execution Context.
+
+============================================================================================================================================
+
+🔹 3 Types of Execution Context
+
+|         Type	                |       What It Means
+____________________________________________________________________________
+| Global Execution Context	    | For the whole file (main code)
+| Function Execution Context	| Created when a function is called
+| Eval Execution Context	    | For code run inside eval() (rare)
+
+
+🔸 1. Global Execution Context (GEC)
+This is created first when the JS file starts running. It holds variable and function.
+
+🔸 2. Function Execution Context (FEC)
+Each time a function is called, a new execution context is created just for that function.
+
+==================================================================================================================================================
+
+⚙️ What’s inside an Execution Context?
+It has two phases:
+
+        ✅ 1. Memory Creation Phase
+                JavaScript sets up:
+                                    Memory for variables (set to undefined)
+                                    Memory for functions (defined function)
+                                    this keyword
+
+        ✅ 2. Execution Phase
+                Now it actually runs the code line by line:
+                                                            Assign values
+                                                            Run functions
+                                                            Log to console
+
+JavaScript runs code using a stack (like plates in a pile). The most recent function goes on top.
+It use LIFO (Last In, First Out) in stacks.
+
+===================================================================================================================================================
+
+🔹 What is the this keyword?
+
+In JavaScript, this is a special keyword that refers to "who is running the code" or "what object is calling the code".
+
+It behaves differently depending on the context.
+
+
+=================================================================================================================================================
+
+✅ What is the Global Execution Context (GEC)?
+
+It's the first thing JavaScript creates when your code runs.
+
+Think of it as the main "big box" where your entire code starts running.
+
+
+🔸 Role of Global Execution Context:
+                                    📦 Stores global variables and functions
+                                    🚀 Starts the program execution
+                                    🧠 Manages this keyword (in browsers, this === window)
+                                    🧱 Base of the call stack (everything else builds on top of it)
+
+
+
+🔍 What does it store?
+            Here’s what the Global Execution Context holds:
+
+        |       Part        |               Meaning                                          |
+        |___________________|________________________________________________________________|   
+        | Global variables	| All variables declared outside functions                       |                    
+        | Global functions	| All functions declared outside any other function              |
+        | this	            | Refers to the global object (window in browser, {} in Node.js) |       
+        | undefined values	| In the creation phase, variables are first set to undefined    |
+
+🧠 Two Phases of Global Execution Context:
+            1. ✅ Memory Creation Phase (JS sets things up)
+                                        Memory is reserved for variables (set to undefined)
+                                        Functions are stored in memory
+                                        Sets up this (global object)
+
+            2. ✅ Execution Phase (JS runs the code line-by-line)
+                                        Values are assigned
+                                        Functions are called
+                                        Output is shown
+
+==========================================================================================================================================
+
+✅ How to Check the Call Stack in Your Browser 🧠💻
+                                      
+                                        🌐 Open your browser (like chrome / Yandex)
+
+                                        🖱️ Right-click anywhere on the page
+
+                                        🛠️ Click “Inspect” to open Developer Tools
+
+                                        📁 Go to the “Sources” tab
+
+                                        📝 Write your JavaScript code or open an existing file
+
+                                        🐞 Add a debugger; statement or set a breakpoint (click on the line number)
+
+                                        ▶️ Run the code, and you’ll see the Call Stack on the right panel
+
+                                        👀 Watch how functions are added and removed from the stack step by step!
+
+
+
+                                        
