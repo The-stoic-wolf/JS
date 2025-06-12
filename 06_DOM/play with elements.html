@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Play with elements</title>
+</head>
+
+<body>
+    <ul class="language">
+        <li>Javascript</li>
+    </ul>    
+</body>
+
+<script>
+    function addLanguage(langName) {
+        const li = document.createElement('li')
+        li.innerHTML = `${langName}`
+        document.querySelector('.language').appendChild(li)
+
+    }
+
+    addLanguage("python")
+    addLanguage("typescript")
+
+    function addOptiLanguage (langName) {
+        const li = document.createElement('li')
+        li.appendChild(document.createTextNode(langName))
+        document.querySelector('.language').appendChild(li)
+    }
+
+    addOptiLanguage('golang')
+
+    const secLang = document.querySelector("li:nth-child(2)")
+    //console.log(secLang.innerHTML)
+
+    const replace = document.createElement('li')
+    replace.innerHTML = "mongoDB"
+
+    secLang.replaceWith(replace)
+
+    const firstLang = document.querySelector('li:last-child')
+    firstLang.outerHTML = "<li>SQL</li>"
+</script>
+</html>

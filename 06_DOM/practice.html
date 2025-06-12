@@ -10,18 +10,16 @@
 </body>
 
 <script>
-    // create new element = p
-    const newParagraph = document.createElement("p");
-    newParagraph.innerHTML = "chai aur code";
-    document.body.appendChild(newParagraph);
+   const div = document.createElement('div')
+   div.setAttribute("className", "main")
+   div.setAttribute("id", "myId")
+   //div.setAttribute("title", "gereated title")
+   div.style.backgroundColor = "green"
+   const addText = document.createTextNode("chai aur code")
+   div.appendChild(addText)
 
-    // create another new elment = h2
-    const newHeading = document.createElement("h2");
-    newHeading.innerHTML = "This is heading 2."
-    
-    // replace p to h2
-    document.body.replaceChildren(newParagraph, newHeading)
-    //document.write="Hello This is new web page."
+   //document.body.appendChild(div)
+
 </script>
 
 </html>
