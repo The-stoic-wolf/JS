@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Other Events</title>
+</head>
+
+<body>
+
+    <input type="text" id="input">
+    <hr>
+    <form action="" id="form" >
+        <input type="text" id="form_input" style="background-color: antiquewhite;"/>
+        <button>Submit</button><button>Reset</button>
+    </form>
+    <hr>
+    <select id="selectBox">
+  <option>Option 1</option>
+  <option>Option 2</option>
+</select>
+</body>
+
+<script>
+// key is pressed
+document.getElementById('input').addEventListener('keydown', function(e) {
+    //console.log("key Down",e)
+    console.log("key is pressed",e.target)
+
+},false)
+
+// key is release
+document.getElementById('input').addEventListener('keyup', function(e) {
+    console.log("key is release",e.target)
+},false)
+
+
+document.getElementById("form_input").addEventListener('submit', function(e) {
+    console.log("submit",e.target)
+},false)
+
+document.getElementById('form_input').addEventListener('reset', function(e) {
+    console.log("Reset:",e)
+},false)
+
+document.getElementById('form_input').addEventListener("input", function(e) {
+    console.log("value is change",e)
+},false)
+
+
+ document.getElementById("selectBox").addEventListener("change", (e) => {
+    console.log("Select changed.", e);
+  });
+
+
+window.addEventListener('load', function(e) {
+    console.log("Window is loaded",e);
+    
+},false)
+
+window.addEventListener('resize', function(e) {
+    console.log("window is resize")
+},false)
+
+window.addEventListener('scroll', function(e) {
+    console.loG("page is scroll")
+},false)
+
+// unload
+
+ window.addEventListener("beforeunload", (e) => {
+    e.preventDefault();
+    e.returnValue = '';
+    console.log("Before unload.", e);
+  });
+
+// 
+
+document.getElementById('form_input').addEventListener("copy",function(e) {
+    console.log("Copied");
+    
+},false)
+
+
+document.getElementById('form_input').addEventListener("cut",function(e) {
+    console.log("Cut");
+    
+},false)
+
+
+document.getElementById('form_input').addEventListener("paste",function(e) {
+    console.log("pasete");
+    
+},false)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+</html>
